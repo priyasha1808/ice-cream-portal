@@ -1,0 +1,26 @@
+<h1>REGISTERED USERS</h1>
+<hr>
+<br><br>
+<table border="1px" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Favourite</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of sList">
+            <td>{{ s.name }}</td>
+            <td>{{ s.email }}</td>
+            <td>{{ s.mobile }}</td>
+            <td>{{ s.Favourite }}</td>
+            <td>{{ s.gender }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br><br>
+<a routerLink="/admin" style="font-size: 20px;">BACK</a><br><br>

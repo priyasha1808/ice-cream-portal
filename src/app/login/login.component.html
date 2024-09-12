@@ -1,0 +1,63 @@
+<body [style.background-image]="'url(' + imageUrl + ')'">
+    <form >
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="../../assets/img/[removal.ai]_50e8305e-4b5d-442d-bb1b-594e3eb0f407-logo-1.png" style="width: 50%; padding-left: -100px;" >
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a routerLink="/home" class="link">Home</a></li>
+                        <li><a routerLink="/contact" class="link">Contact Us</a></li>
+                        <li><a routerLink="/about" class="link">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-menu-btn">
+                    <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+                </div>
+            </nav>
+        
+        <!----------------------------- Form box ----------------------------------->    
+            <div class="form-box">
+                
+                <!------------------- login form -------------------------->
+        
+                <div class="login-container" id="login">
+                    <div class="top">
+                        <span>Don't have an account? <a routerLink="/register">Sign Up</a></span>
+                        <header>Login</header>
+                    </div>
+                    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                        <div class="input-box">
+                            <input type="email" name="email" ngModel placeholder="Email" required email class="input-field">
+                            <div *ngIf="form.controls['email'].errors?.['email'] && form.controls['email'].touched" style="color: white;">Invalid email format</div>
+                        </div>
+                        <br>
+                        <div class="input-box">
+                            <input type="password" name="password" ngModel #password="ngModel"   placeholder="Password" required class="input-field">
+                
+                        </div>
+                        <br>
+                        <div class="input-box">
+                            <input type="submit" class="submit" value="Sign In" [disabled]="!form.valid">
+                        </div>
+                    </form>
+                    
+                    
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="login-check">
+                            <label for="login-check"> Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a routerLink="/forgotpw">Forgot password?</a></label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+</body>
+    

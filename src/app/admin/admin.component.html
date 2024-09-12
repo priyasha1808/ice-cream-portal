@@ -1,0 +1,20 @@
+<body [style.background-image]="'url(' + imageUrl + ')'">
+    <form >
+        <h3>WELCOME TO ADMIN PAGE,{{user1}}</h3>
+        
+        <div class="box">
+            <a routerLink="/users" style="font-size: 30px;padding-left: 10%;  padding-right: 10%;">VIEW USERS</a>
+        </div>
+        <div class="box">
+            <a routerLink="/delete" style="font-size: 30px;padding-left: 10%;  padding-right: 10%;">DELETE USERS</a>
+        </div>
+        <div class="box">
+            <a routerLink="/addflavour" style="font-size: 30px;padding-left: 10%;  padding-right: 10%;">ADD FLAVOURS</a>
+        </div>
+        
+        <div class="box">
+            <a routerLink="/home" style="padding-left: 10%; font-size: 20px; padding-right: 10%;" (click)="logout()">LOGOUT</a>
+        </div>
+    </form>
+</body>
+

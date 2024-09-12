@@ -1,0 +1,23 @@
+<form action="/upload-image" method="POST" enctype="multipart/form-data">
+    <img src="../../assets/img/imag.ice.jpg" style="background-position:center; width: 100%;">
+    <div class="box">
+        <h1>Melt In Ice creams</h1>
+        <h3>SINCE 2000</h3>
+        <br><br><hr><br>
+        <label style="padding-left: 18%; font-size: xx-large;">FLAVOUR ID :    </label><input type="number" name="flavour_id" style="height: 5%;">
+        <br><br><br> 
+        <label style="padding-left: 18%; font-size: xx-large;">FLAVOUR NAME :    </label><input type="text" name="flavour_name" style="height: 5%;">
+        <br><br><br> 
+        <label style="padding-left: 18%;font-size: xx-large;">FLAVOUR PRICE :   </label><input type="number" name="flavour_price" style="height: 5%;">
+        <br><br><br>
+        <label style="padding-left: 18%; font-size: xx-large;"> IMAGE :    </label> <input type="file" accept="image/*" (change)="onImageSelected($event)" name="image">
+
+        <br><br><br>
+        
+        <button type="submit">ADD FLAVOURS</button>
+        <a (click)="logout()">Back to home</a>
+    </div>
+</form>
+
+
+

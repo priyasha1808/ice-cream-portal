@@ -1,0 +1,27 @@
+<body [style.background-image]="'url(' + imageUrl + ')'" >
+    <form>
+        <h2>Delete Account</h2>
+        <div class="box">
+            <label>Email Address</label>
+            <input type="text" name="email" id="email" [(ngModel)]="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="box">
+            <label>Password</label>
+            <input type="password" name="pw"  id="pw" [(ngModel)]="pw">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        
+                
+        <div class="box">
+            <input type="submit" value="Delete" (click)="delete()">
+        </div>
+        <div class="box">{{msg}}{{email|mylen}}</div>
+        <div>
+            <a routerLink="/admin" style="padding-left: 32%;">BACK</a>
+            <br><br>
+            
+        </div>
+    </form>
+</body>
+

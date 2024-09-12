@@ -1,0 +1,31 @@
+<div>
+    <h2>Shopping Cart</h2>
+    <h4 class="welcome-message">Welcome, <span class="username">{{ username | uppercase }}</span>!</h4>
+    <a routerLink="/home" style="padding-left: 85%; font-size: 30px;">HOME</a>
+    <a routerLink="/home" style="font-size: 30px;" (click)="logout()">| LOGOUT</a>
+</div>
+
+<hr>
+
+    <div class="products-container">
+        <div *ngFor="let product of products" class="product-card">
+            <h3>{{ product.name }}</h3>
+            <img [src]="product.imageUrl" alt="{{ product.name }} Image">
+            <p>Price: ${{ product.price }}</p>
+            <button (click)="addToCart(product)">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div >
+        <h3>Cart</h3>
+        <div *ngFor="let product of cart" class="product-card">
+            <p>{{ product.name }} - ${{ product.price }}</p>
+            <button (click)="removeFromCart(product)">Remove from Cart</button>
+        </div>
+        <p>Total: ${{getTotal()}}</p>
+        <button (click)="checkout()" class="checkout-button">Pay</button>
+    </div>
+
+
+
+
